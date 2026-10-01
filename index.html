@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#DCEBD2">
+<title>Martina, ¿tomamos un helado?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --menta:#DCEBD2; --crema:#FFF6DC; --frutilla:#E8456B; --choco:#3A2217; --cono:#D9A25B;
+  --serif:'Fraunces',Georgia,serif; --sans:'DM Sans',-apple-system,'Helvetica Neue',sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--menta);color:var(--choco);font-family:var(--sans);font-size:17px;line-height:1.55}
+main{max-width:460px;margin:0 auto;padding:28px 22px 40px}
+
+.hero{text-align:center}
+.cono{width:150px;height:auto;display:block;margin:0 auto 6px;animation:bamboleo 3s ease-in-out infinite;transform-origin:50% 100%}
+@keyframes bamboleo{0%,100%{transform:rotate(-4deg)}50%{transform:rotate(4deg)}}
+h1{font-family:var(--serif);font-weight:600;font-size:2.3rem;line-height:1.1;margin:10px 0 12px}
+.sub{font-size:1.1rem;margin:0}
+
+.ticket{background:var(--crema);border-radius:22px 22px 6px 6px;padding:22px;margin:30px 0 22px;border:2px solid var(--choco)}
+.fila{display:flex;gap:14px;padding:12px 0;border-bottom:2px dashed rgba(58,34,23,.25)}
+.fila:last-child{border-bottom:0}
+.fila b{min-width:76px;font-family:var(--serif);font-style:italic;font-weight:500;color:var(--frutilla)}
+.fila span{flex:1}
+
+.nota{font-family:var(--serif);font-size:1.15rem;line-height:1.5;margin:0 0 6px}
+.firma{margin:0 0 30px;font-weight:500}
+
+.pregunta{font-family:var(--serif);font-size:1.6rem;text-align:center;margin:0 0 16px}
+.botones{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+button{font:inherit;font-weight:700;font-size:1.1rem;min-height:56px;border-radius:999px;border:2px solid var(--choco);cursor:pointer;-webkit-tap-highlight-color:transparent;transition:transform .12s}
+button:active{transform:scale(.96)}
+button:focus-visible{outline:3px solid var(--choco);outline-offset:3px}
+.si{background:var(--frutilla);color:#fff}
+.no{background:transparent;color:var(--choco)}
+
+.gracias{display:none;text-align:center;background:var(--crema);border:2px solid var(--choco);border-radius:22px;padding:24px}
+.gracias h2{font-family:var(--serif);font-size:1.7rem;margin:0 0 8px}
+.gracias p{margin:0 0 14px}
+.gracias a{display:inline-block;background:var(--frutilla);color:#fff;font-weight:700;text-decoration:none;padding:14px 22px;border-radius:999px;border:2px solid var(--choco)}
+body.confirmado .pregunta,body.confirmado .botones{display:none}
+body.confirmado .gracias{display:block}
+
+.velo{position:fixed;inset:0;background:rgba(58,34,23,.55);display:none;align-items:center;justify-content:center;padding:24px;z-index:10}
+.velo.abierto{display:flex}
+.cartel{background:var(--crema);border:2px solid var(--choco);border-radius:22px;padding:26px 22px;max-width:340px;width:100%;text-align:center}
+.cartel p{font-family:var(--serif);font-size:1.4rem;line-height:1.25;margin:0 0 18px}
+.cartel button{background:var(--frutilla);color:#fff;width:100%}
+
+@media (prefers-reduced-motion:reduce){.cono{animation:none}button{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <svg class="cono" viewBox="0 0 120 190" role="img" aria-label="Helado de dos bochas">
+      <polygon points="30,92 90,92 60,182" fill="#D9A25B" stroke="#3A2217" stroke-width="4" stroke-linejoin="round"/>
+      <path d="M44,100 L74,100 M40,116 L80,116 M50,134 L70,134" stroke="#3A2217" stroke-width="3" stroke-linecap="round" opacity=".5"/>
+      <circle cx="60" cy="70" r="34" fill="#F4E3B8" stroke="#3A2217" stroke-width="4"/>
+      <circle cx="60" cy="38" r="30" fill="#E8456B" stroke="#3A2217" stroke-width="4"/>
+      <circle cx="60" cy="10" r="7" fill="#C0273F" stroke="#3A2217" stroke-width="3"/>
+      <path d="M26,82 q8,14 16,0 q8,14 16,0 q8,14 16,0 q8,14 12,-6" fill="none" stroke="#3A2217" stroke-width="3" stroke-linecap="round" opacity=".35"/>
+    </svg>
+    <h1>Martina, ¿tomamos un helado?</h1>
+    <p class="sub">Tengo un plan para el miércoles y quiero que vengas.</p>
+  </section>
+
+  <section class="ticket" aria-label="Detalles del plan">
+    <div class="fila"><b>Cuándo</b><span>Miércoles 7 de octubre</span></div>
+    <div class="fila"><b>Hora</b><span>De 18:00 a 20:30 aprox.</span></div>
+    <div class="fila"><b>Plan</b><span>Un helado o algo rico para comer. Lo decidimos juntos.</span></div>
+  </section>
+
+  <p class="nota">Me gustaría conocerte un poco más, sin apuro y con algo rico de por medio. Si te copa, confirmame abajo.</p>
+  <p class="firma">— Jeremías</p>
+
+  <p class="pregunta">¿Venís?</p>
+  <div class="botones">
+    <button class="si" id="si" type="button">Sí</button>
+    <button class="no" id="no" type="button">No</button>
+  </div>
+
+  <section class="gracias" id="gracias" aria-live="polite">
+    <h2>¡Genial!</h2>
+    <p>Se abrió WhatsApp con tu confirmación. Tocá enviar para que me llegue.</p>
+    <a id="reenviar" href="#">Abrir WhatsApp de nuevo</a>
+  </section>
+</main>
+
+<div class="velo" id="velo" role="alertdialog" aria-modal="true" aria-labelledby="msg">
+  <div class="cartel">
+    <p id="msg">Opción incorrecta, intente de nuevo</p>
+    <button type="button" id="cerrar">Intentar de nuevo</button>
+  </div>
+</div>
+
+<script>
+// ► Poné tu número con código de país, solo dígitos. Ejemplo Tucumán: 5493815551234
+var NUMERO = "";
+
+var MENSAJE = "¡Hola Jeremías! Soy Martina. Confirmo que sí, nos vemos el miércoles 7 de octubre a las 18:00 🍦";
+var enlace = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(MENSAJE);
+
+var velo = document.getElementById("velo");
+document.getElementById("no").addEventListener("click", function () {
+  velo.classList.add("abierto");
+  document.getElementById("cerrar").focus();
+});
+document.getElementById("cerrar").addEventListener("click", function () {
+  velo.classList.remove("abierto");
+});
+document.getElementById("si").addEventListener("click", function () {
+  document.body.classList.add("confirmado");
+  document.getElementById("reenviar").href = enlace;
+  window.location.href = enlace;
+});
+</script>
+</body>
+</html>
