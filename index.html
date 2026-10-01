@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#DCEBD2">
-<title>Martina, ¿tomamos un helado?</title>
+<title>Martina, ¿Hacemos algo?</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
@@ -71,8 +71,8 @@ body.confirmado .gracias{display:block}
       <circle cx="60" cy="10" r="7" fill="#C0273F" stroke="#3A2217" stroke-width="3"/>
       <path d="M26,82 q8,14 16,0 q8,14 16,0 q8,14 16,0 q8,14 12,-6" fill="none" stroke="#3A2217" stroke-width="3" stroke-linecap="round" opacity=".35"/>
     </svg>
-    <h1>Martina, ¿tomamos un helado?</h1>
-    <p class="sub">Tengo un plan para el miércoles y quiero que vengas.</p>
+    <h1>Mar, te debo una salida.</h1>
+    <p class="sub">Esta vez no se cancela por nada.</p>
   </section>
 
   <section class="ticket" aria-label="Detalles del plan">
@@ -81,10 +81,10 @@ body.confirmado .gracias{display:block}
     <div class="fila"><b>Plan</b><span>Un helado o algo rico para comer. Lo decidimos juntos.</span></div>
   </section>
 
-  <p class="nota">Me gustaría conocerte un poco más, sin apuro y con algo rico de por medio. Si te copa, confirmame abajo.</p>
+  <p class="nota">Para compensar la que te cancelé y no quedar como el peor. Si estás libre, decime abajo y cerramos..</p>
   <p class="firma">— Jeremías</p>
 
-  <p class="pregunta">¿Venís?</p>
+  <p class="pregunta">¿Aceptas la invitación?</p>
   <div class="botones">
     <button class="si" id="si" type="button">Sí</button>
     <button class="no" id="no" type="button">No</button>
@@ -106,9 +106,9 @@ body.confirmado .gracias{display:block}
 
 <script>
 // ► Poné tu número con código de país, solo dígitos. Ejemplo Tucumán: 5493815551234
-var NUMERO = "";
+var NUMERO = "5493813003465";
 
-var MENSAJE = "¡Hola Jeremías! Soy Martina. Confirmo que sí, nos vemos el miércoles 7 de octubre a las 18:00 🍦";
+var MENSAJE = "¡Buenasss. Confirmo que sí, nos vemos el miércoles 7";
 var enlace = "https://wa.me/" + NUMERO + "?text=" + encodeURIComponent(MENSAJE);
 
 var velo = document.getElementById("velo");
